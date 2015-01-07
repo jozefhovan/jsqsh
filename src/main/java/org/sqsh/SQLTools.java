@@ -306,6 +306,8 @@ public class SQLTools {
      * @return True if it is empty
      */
     private static boolean isEmptyState(String sqlState) {
+        if ( sqlState == null )
+        	return true;
         
         int len = sqlState.length();
         int idx = 0;
